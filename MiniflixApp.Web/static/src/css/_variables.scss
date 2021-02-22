@@ -1,0 +1,58 @@
+//
+////// Set variables and spriting specific to this project.
+
+//// Spacing Variables
+$vertical-space: 20px;
+$horizontal-space: 24px;
+$content-width: 94%; //Page width
+$max-content-width: 1200px; //Maximum width before it just ends up centered (Containers will extend by default)
+$border-radius: 4px;
+
+// Colours
+// e.g Link colour, bg, text colour, hover colour, active colour
+$body-background-color: #141414;
+$default-text-color: #ffffff;
+$secondary-text-color: #464646;
+$primary-highlight-color: #0707f8;
+$secondary-highlight-color: #5353fa;
+$default-link-color: #a5f9f1;
+$hover-link-color: #79c6c6;
+
+$card-background-color: darken($body-background-color, 10%);
+
+// Fonts
+// Common font stacks should be defined in util.scss, specific ones can be named or referenced here
+$base-font: 'Lato',Arial,"Helvetica Neue",Helvetica,sans-serif;
+$heading-font: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+$baseline: 1.4rem;
+
+$minScreen: 20rem;
+$maxScreen: 80rem;
+$minFont: .75rem;
+$maxFont: 1.25rem;
+
+$h1: 2rem;
+$h2: 1.8rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+
+//// Media Queries
+// Uncomment this if your site isn't responsive. Enjoy your trip to the past!
+//$mq-responsive: false;
+
+// Responsive breakpoints, use semantic names
+$mq-breakpoints: ( XS: 320px, S: 480px, M: 720px, L: 980px, XL: 1024px, XXL: 1280px );
+
+// Define the breakpoint from the $mq-breakpoints list that IE8 should get
+$mq-static-breakpoint: XL;
+
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width, e.g. (mobile, tablet, desktop).
+$mq-show-breakpoints: () !default;
+
+//// Animation Variables
+$transition-speed: 0.1s;
+$transition-timing: ease-in-out;

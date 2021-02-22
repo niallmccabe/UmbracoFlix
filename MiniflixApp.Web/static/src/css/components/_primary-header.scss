@@ -1,0 +1,19 @@
+﻿@import "../variables";
+@import "../mixins";
+//@import "../mq";
+
+//// Header
+.primary-header{}
+.primary-header__inner{
+	/* Example styles */
+	padding:10px 0;
+	/* End Example styles */
+}
+.primary-header__logo{
+	/* Example styles */
+	display:block;
+	@include headingFont($h1);
+	margin-bottom:0;
+	text-decoration:none;
+	/* End Example styles */
+}

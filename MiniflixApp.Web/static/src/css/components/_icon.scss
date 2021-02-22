@@ -1,0 +1,49 @@
+﻿//@import "../variables";
+//@import "../mixins";
+//@import "../mq";
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+
+    &--xs {
+        width: 15px;
+        height: 15px;
+    }
+
+    &--sm {
+        width: 25px;
+        height: 25px;
+    }
+
+    &--md {
+        width: 35px;
+        height: 35px;
+    }
+
+    &--lg {
+        width: 45px;
+        height: 45px;
+    }
+
+    &--xl {
+        width: 60px;
+        height: 60px;
+    }
+
+    &--xxl {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* // ability to allow an icon to take the color of 
+symbol {
+	&#icon-android,&#icon-apple {
+		path, rect {
+			fill: currentColor;
+		}
+	}
+}*/

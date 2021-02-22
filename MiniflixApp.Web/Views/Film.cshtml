@@ -1,0 +1,18 @@
+﻿@using Umbraco.Core
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Film>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "_Layout.cshtml";
+
+    //var umbracoFilePath = Model.File.Value<string>(Constants.Conventions.Media.File);
+    //var path = HttpContext.Current.Server.MapPath(umbracoFilePath);
+}
+<div class="container">
+    <div class="row">
+        <h1 class="p-4">@Model.Name</h1>
+        <video controls style="max-width:100%">
+            <source src="@Model.File.Url()" type="video/mp4">
+        </video>
+    </div>
+   
+</div>

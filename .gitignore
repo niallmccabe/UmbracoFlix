@@ -24,3 +24,25 @@
 
 # Ignore the Models Builder models out of date flag
 **/App_Data/Models/ood.flag
+
+MiniflixApp.Core/obj/Debug/
+
+MiniflixApp.Web/obj/Debug/
+
+MiniflixApp.UI/obj/Debug/
+**/node_modules
+MiniflixApp.Web/Media/
+
+packages/
+
+.vs/MiniflixApp/v16/
+
+MiniflixApp.Web/bin/
+
+MiniflixApp.Web/npm-debug.log
+
+MiniflixApp.Web/yarn.lock
+
+MiniflixApp.Web/yarn-error.log
+
+MiniflixApp.Web/Umbraco/

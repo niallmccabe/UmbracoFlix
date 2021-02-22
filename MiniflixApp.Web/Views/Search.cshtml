@@ -1,0 +1,114 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Search>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "_Layout.cshtml";
+    var tagQuery = Umbraco.TagQuery;
+    var allTagGroups = Umbraco.TagQuery.GetAllContentTags().Select(x => x.Group);
+    var queryTags = Request.QueryString.AllKeys.Where(x => allTagGroups.Contains(x));
+    var filteredFilms = new List<Film>();
+    var filteredTelevision = new List<TelevisionShow>();
+    var filteredBooks = new List<Book>();
+
+    foreach (var tag in queryTags)
+    {
+        var films = Model.Root().DescendantsOfType("film").Where(x => x.Value<IEnumerable<string>>(tag).Any(y => y == Request.QueryString[tag])).Select(x => (Film)x);
+        var tvShows = Model.Root().DescendantsOfType("televisionShow").Where(x => x.Value<IEnumerable<string>>(tag).Any(y => y == Request.QueryString[tag])).Select(x => (TelevisionShow)x);
+        var books = Model.Root().DescendantsOfType("book").Where(x => x.Value<IEnumerable<string>>(tag).Any(y => y == Request.QueryString[tag])).Select(x => (Book)x);
+
+        if (films != null && films.Any())
+        {
+            filteredFilms.AddRange(films);
+        }
+        if (tvShows != null && tvShows.Any())
+        {
+            filteredTelevision.AddRange(tvShows);
+        }
+    }
+
+}
+<div class="container">
+    <h2>Films</h2>
+    <div class="columns">
+        @foreach (Film film in filteredFilms)
+        {
+            <div class="column is-one-third">
+                <div class="card">
+                    @if (film.Poster != null)
+                    {
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="@film.Poster.GetCropUrl(270, 400)" />
+                            </figure>
+                        </div>
+                    }
+
+                    <div class="card-content">
+                        <div class="content">
+                            <a href="@film.Url()">
+                                @film.Name
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <h2>TV Shows</h2>
+    <div class="columns">
+        @foreach (TelevisionShow show in filteredTelevision)
+        {
+            <div class="column is-one-third">
+                <div class="card">
+                    @*@if (show.Poster != null)
+                    {
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="@show.Poster.GetCropUrl(270, 400)" />
+                            </figure>
+                        </div>
+                    }*@
+
+                    <div class="card-content">
+                        <div class="content">
+                            <a href="@show.Url()">
+                                @show.Name
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <h2>Books</h2>
+    <div class="columns">
+        @foreach (Film film in filteredFilms)
+        {
+            <div class="column is-one-third">
+                <div class="card">
+                    @if (film.Poster != null)
+                    {
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="@film.Poster.GetCropUrl(270, 400)" />
+                            </figure>
+                        </div>
+                    }
+
+                    <div class="card-content">
+                        <div class="content">
+                            <a href="@film.Url()">
+                                @film.Name
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.CategoryGroup>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "_Layout.cshtml";
+
+    var tagQuery = Umbraco.TagQuery;
+    var allTags = Umbraco.TagQuery.GetAllContentTags().GroupBy(x => x.Group);
+    var searchPage = Model.Root().Children.FirstOrDefault(x => x is Search);
+}
+<div class="container">
+    <div class="columns">
+        @foreach (var tagGroup in allTags)
+        {
+            <div class="column is-half">
+                <aside class="menu">
+                    <p class="menu-label">
+                        @tagGroup.Key
+                    </p>
+                    <ul class="menu-list">
+                        @foreach (var tag in tagGroup)
+                        {
+                            <li><a href="@searchPage.Url()?@tagGroup.Key=@tag.Text">@tag.Text</a></li>
+                        }
+                    </ul>
+                </aside>
+            </div>         
+        }
+    </div>
+</div>

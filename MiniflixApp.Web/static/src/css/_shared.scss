@@ -1,0 +1,19 @@
+// Styles which should be present in both the front end AND the back end (WYSIWYG editors)
+@import "variables";
+
+img{ margin-bottom:1em; height:auto !important; }
+img[style*="float: left"] { margin: 0 1em 1em 0; max-width:40%; }
+img[style*="float: right"] { margin: 0 0 1em 1em;  max-width:40%; }
+img[style*="margin-left: auto"] { margin-bottom: 1em;  max-width:100%; width:auto !important; }
+
+h1,h2,h3,h4,h5{ 
+  font-family: $heading-font; 
+  line-height:1.2em; 
+  
+  &:first-child{
+    margin-top:0;
+  }
+}
+p{
+  margin-top:0;
+}

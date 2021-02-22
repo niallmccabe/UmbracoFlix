@@ -1,0 +1,64 @@
+﻿@import "variables";
+@import "mixins";
+
+html{
+  height:100%;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
+}
+body {
+    line-height: $baseline;
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    background-color: $body-background-color;
+    color: $default-text-color;
+    overflow-x: hidden;
+    min-height: 100%;
+    min-height: 100vh;
+}
+h1 {
+  @include headingFont($h1);
+}
+
+h2 {
+  @include headingFont($h2);
+}
+
+h3 {
+  @include headingFont($h3);
+}
+
+h4 {
+  @include headingFont($h4);
+}
+
+h5 {
+  @include headingFont($h5);
+}
+p{
+  margin-top:0;
+  line-height: $baseline;
+  margin-bottom: $baseline;
+}
+a{ 
+  color:$default-link-color; 
+  text-decoration:underline;
+
+  &:hover{
+    color:$hover-link-color; 
+    text-decoration:none;
+  }
+}
+ul{ 
+  padding:0px; 
+  margin:0px; 
+  list-style-type:none; 
+}
+img{ margin-bottom:1em; }
+.show-vertical-rhythm{
+  background-image: linear-gradient(rgba(200, 50, 50, .25) 1px, transparent 1px);
+  background-size: 1px $baseline;
+  padding-bottom:1px;
+  margin-bottom:$baseline;
+}

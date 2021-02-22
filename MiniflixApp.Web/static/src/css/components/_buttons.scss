@@ -1,0 +1,44 @@
+//@import "../variables";
+//@import "../mixins";
+@import "../mq";
+
+.btn{
+    display:inline-block;
+    vertical-align:middle;
+    color:black;
+    border:2px solid black;
+    padding:11px 24px;
+    text-decoration:none;
+    height:auto;
+    text-align:center;
+    float:none;
+    width:100%;
+    min-height:0;
+    font-weight:bold;
+    font-size:18px;
+    line-height:22px;
+    background:transparent;
+    cursor:pointer;
+
+    @include mq($from: M){
+        width:auto;
+
+        &.btn--fw{
+            width:100%;
+        }
+    }
+}
+a.btn--primary, input.btn--primary, button.btn--primary, .btn--primary > a, .contour .btn.primary{
+	@extend .btn;
+
+	&:hover{
+
+	}
+}
+a.btn--secondary, input.btn--secondary, button.btn--secondary, .btn--secondary > a, .contour .btn.secondary{
+  @extend .btn;
+
+	&:hover{
+
+	}
+}

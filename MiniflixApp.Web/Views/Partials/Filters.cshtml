@@ -1,0 +1,32 @@
+﻿@inherits UmbracoViewPage<IPublishedContent>
+@{
+    
+    var tagQuery = Umbraco.TagQuery;
+    var allTags = Umbraco.TagQuery.GetAllContentTags().GroupBy(x => x.Group);
+    var searchPage = Model.Root().Children.FirstOrDefault(x => x is Search);
+}
+<div class="container">
+    <div class="columns">
+        @foreach (var tagGroup in allTags)
+        {
+            <div class="column is-half">
+                <aside class="menu">
+                    <p class="menu-label">
+                        @tagGroup.Key
+                    </p>
+
+                    <div class="select">
+                        <select>
+                            @foreach (var tag in tagGroup)
+                            {
+                                <option value="@tag.Text">@tag.Text</option>
+                            }
+
+                        </select>
+                    </div>
+                   
+                </aside>
+            </div>
+        }
+    </div>
+</div>

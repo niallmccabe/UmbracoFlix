@@ -1,0 +1,69 @@
+﻿//@import "../variables";
+//@import "../mixins";
+//@import "../mq";
+
+//// Nav
+.primary-navigation{
+	/* Example styles */
+	background:#cccccc;
+	border-bottom:2px solid #bbbbbb;
+	/* End Example styles */
+}
+.primary-navigation__inner{}
+.primary-navigation__list-item{
+	/* Example styles */
+	display:inline-block;
+	position:relative;
+	/* End Example styles */
+
+	&--has-subnav{
+		/* Example styles */
+		&:after{
+			content:"\25BC";
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+			right:0;
+		}
+		/* End Example styles */
+	}
+}
+.primary-navigation__list-item-actual{
+	/* Example styles */
+	display:block;
+	padding:8px;
+	/* End Example styles */
+
+	.primary-navigation__list-item--has-subnav &{
+		/* Example styles */
+		padding-right:18px;
+		/* End Example styles */
+	}
+}
+.primary-navigation__sublist{
+	/* Example styles */
+	background:#cccccc;
+	display:none;
+	left:0;
+	position:absolute;
+	top:100%;
+	min-width:180px;
+	/* End Example styles */
+
+	.primary-navigation__list-item:hover &{
+		/* Example styles */
+		display:block;
+		/* End Example styles */
+	}
+}
+.primary-navigation__sublist-item{
+	/* Example styles */
+	border-bottom:2px solid #bbbbbb;
+	display:block;
+	/* End Example styles */
+}
+.primary-navigation__sublist-item-actual{
+	display:block;
+	padding:8px;
+	/* End Example styles */
+}

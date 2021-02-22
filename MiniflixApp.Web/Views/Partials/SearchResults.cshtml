@@ -1,0 +1,31 @@
+﻿@model MiniflixApp.Core.Models.ViewModels.SearchResultsViewModel
+@{
+
+}
+<div class="container">
+    <div class="columns">
+        @foreach (var result in Model.SearchResults)
+        {
+            <div class="column is-one-third">
+                <div class="card">
+                    @if (result.ImageUrl != null)
+                    {
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="@result.ImageUrl" />
+                            </figure>
+                        </div>
+                    }
+
+                    <div class="card-content">
+                        <div class="content">
+                            <a href="@result.LinkUrl">
+                                @result.Name
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

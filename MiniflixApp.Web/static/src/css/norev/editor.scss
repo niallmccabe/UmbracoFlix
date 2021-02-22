@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../mq";
+@import "../mixins";
+body {
+    line-height: $baseline;
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    background-color: $body-background-color;
+    color: $default-text-color;
+    @import "../shared";
+    @import "../components/buttons"; // import buttons.scss separately to shared.scss, so that when we import shared.scss into the front end site, button styles aren't duplicated
+}
+
+body.mce-content-body {
+    line-height: $baseline;
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    background-color: $body-background-color;
+    color: $default-text-color;
+}
+
+
+/**umb_name:Heading*/
+h2{/**/}
+
+/**umb_name:Subheading*/
+h3{/**/}
+
+/**umb_name:Button*/
+.btn--primary{/**/}
