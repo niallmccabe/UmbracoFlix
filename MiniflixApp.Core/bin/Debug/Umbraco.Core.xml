@@ -1013,7 +1013,7 @@
         </member>
         <member name="F:Umbraco.Core.Constants.PropertyEditors.Aliases.MultiUrlPicker">
             <summary>
-            Alias for the multi url picker editor.
+            Alias for the multi URL picker editor.
             </summary>
         </member>
         <member name="T:Umbraco.Core.Constants.PropertyEditors.ConfigurationKeys">
@@ -1183,7 +1183,7 @@
         </member>
         <member name="F:Umbraco.Core.Constants.AppSettings.ReservedUrls">
             <summary>
-            The reserved urls from web.config.
+            The reserved URLs from web.config.
             </summary>
         </member>
         <member name="F:Umbraco.Core.Constants.AppSettings.ReservedPaths">
@@ -1220,7 +1220,7 @@
         </member>
         <member name="F:Umbraco.Core.Constants.AppSettings.HideTopLevelNodeFromPath">
             <summary>
-            A true/false value indicating whether umbraco should hide top level nodes from generated urls.
+            A true/false value indicating whether umbraco should hide top level nodes from generated URLs.
             </summary>
         </member>
         <member name="F:Umbraco.Core.Constants.AppSettings.UseHttps">
@@ -1268,6 +1268,7 @@
             The preview cookie name
             </summary>
         </member>
+        <!-- Badly formed XML comment ignored for member "F:Umbraco.Core.Constants.Web.AcceptPreviewCookieName" -->
         <member name="T:Umbraco.Core.Constants.Locks">
             <summary>
             Defines lock objects.
@@ -1334,6 +1335,704 @@
             </summary>
             <remarks>Well-known entity types are those that Deploy already knows about,
             but entity types are strings and so can be extended beyond what is defined here.</remarks>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.UnattendedInstallException">
+            <summary>
+            An exception that is thrown if an unattended installation occurs.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.UnattendedInstallException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.UnattendedInstallException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.UnattendedInstallException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.UnattendedInstallException" /> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.UnattendedInstallException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.UnattendedInstallException" /> class with a specified error message
+            and a reference to the inner exception which is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The inner exception, or null.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.UnattendedInstallException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.UnattendedInstallException" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.PanicException">
+            <summary>
+            Represents an internal exception that in theory should never been thrown, it is only thrown in circumstances that should never happen.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException">
+            <summary>
+            The exception that is thrown when a null reference, or an empty argument, is passed to a method that does not accept it as a valid argument.
+            </summary>
+            <seealso cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class with the name of the parameter that caused this exception.
+            </summary>
+            <param name="paramName">The named of the parameter that caused the exception.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class with a specified error message and the name of the parameter that caused this exception.
+            </summary>
+            <param name="paramName">The named of the parameter that caused the exception.</param>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">An object that describes the source or destination of the serialized data.</param>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.AuthorizationException">
+            <summary>
+            The exception that is thrown when authorization failed.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.BootFailedException">
+            <summary>
+            An exception that is thrown if the Umbraco application cannot boot.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="F:Umbraco.Core.Exceptions.BootFailedException.DefaultMessage">
+            <summary>
+            Defines the default boot failed exception message.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.BootFailedException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message
+            and a reference to the inner exception which is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The inner exception, or null.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.BootFailedException" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.BootFailedException.Rethrow(Umbraco.Core.Exceptions.BootFailedException)">
+            <summary>
+            Rethrows a captured <see cref="T:Umbraco.Core.Exceptions.BootFailedException" />.
+            </summary>
+            <param name="bootFailedException">The boot failed exception.</param>
+            <exception cref="T:Umbraco.Core.Exceptions.BootFailedException">
+            </exception>
+            <remarks>
+            The exception can be null, in which case a default message is used.
+            </remarks>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.DataOperationException`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="P:Umbraco.Core.Exceptions.DataOperationException`1.Operation">
+            <summary>
+            Gets the operation.
+            </summary>
+            <value>
+            The operation.
+            </value>
+            <remarks>
+            This object should be serializable to prevent a <see cref="T:System.Runtime.Serialization.SerializationException" /> to be thrown.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
+            </summary>
+            <param name="operation">The operation.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(`0,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">info</exception>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">info</exception>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.InvalidCompositionException">
+            <summary>
+            The exception that is thrown when a composition is invalid.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="P:Umbraco.Core.Exceptions.InvalidCompositionException.ContentTypeAlias">
+            <summary>
+            Gets the content type alias.
+            </summary>
+            <value>
+            The content type alias.
+            </value>
+        </member>
+        <member name="P:Umbraco.Core.Exceptions.InvalidCompositionException.AddedCompositionAlias">
+            <summary>
+            Gets the added composition alias.
+            </summary>
+            <value>
+            The added composition alias.
+            </value>
+        </member>
+        <member name="P:Umbraco.Core.Exceptions.InvalidCompositionException.PropertyTypeAliases">
+            <summary>
+            Gets the property type aliases.
+            </summary>
+            <value>
+            The property type aliases.
+            </value>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
+            </summary>
+            <param name="contentTypeAlias">The content type alias.</param>
+            <param name="propertyTypeAliases">The property type aliases.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String,System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
+            </summary>
+            <param name="contentTypeAlias">The content type alias.</param>
+            <param name="addedCompositionAlias">The added composition alias.</param>
+            <param name="propertyTypeAliases">The property type aliases.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">info</exception>
+        </member>
+        <member name="T:Umbraco.Core.Exceptions.WontImplementException">
+            <summary>
+            The exception that is thrown when a requested method or operation is not, and will not be, implemented.
+            </summary>
+            <remarks>
+            The <see cref="T:System.NotImplementedException" /> is to be used when some code is not implemented,
+            but should eventually be implemented (i.e. work in progress) and is reported by tools such as ReSharper.
+            This exception is to be used when some code is not implemented, and is not meant to be, for whatever
+            reason.
+            </remarks>
+            <seealso cref="T:System.NotImplementedException" />
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class with a specified reason message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="inner">The exception that is the cause of the current exception. If the <paramref name="inner" /> parameter is not <see langword="null" />, the current exception is raised in a <see langword="catch" /> block that handles the inner exception.</param>
+        </member>
+        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Umbraco.Core.Collections.EventClearingObservableCollection`1">
+            <summary>
+            Allows clearing all event handlers
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.EventClearingObservableCollection`1.ClearCollectionChangedEvents">
+            <summary>
+            Clears all event handlers for the <see cref="!:CollectionChanged"/> event
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.CompositeNStringNStringKey">
+            <summary>
+            Represents a composite key of (string, string) for fast dictionaries.
+            </summary>
+            <remarks>
+            <para>The string parts of the key are case-insensitive.</para>
+            <para>Null is a valid value for both parts.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeNStringNStringKey.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeNStringNStringKey"/> struct.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.CompositeStringStringKey">
+            <summary>
+            Represents a composite key of (string, string) for fast dictionaries.
+            </summary>
+            <remarks>
+            <para>The string parts of the key are case-insensitive.</para>
+            <para>Null is NOT a valid value for neither parts.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeStringStringKey.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeStringStringKey"/> struct.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.CompositeIntStringKey">
+            <summary>
+            Represents a composite key of (int, string) for fast dictionaries.
+            </summary>
+            <remarks>
+            <para>The integer part of the key must be greater than, or equal to, zero.</para>
+            <para>The string part of the key is case-insensitive.</para>
+            <para>Null is a valid value for both parts.</para>
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeIntStringKey.#ctor(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeIntStringKey"/> struct.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.CompositeTypeTypeKey">
+            <summary>
+            Represents a composite key of (Type, Type) for fast dictionaries.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.#ctor(System.Type,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeTypeTypeKey"/> struct.
+            </summary>
+        </member>
+        <member name="P:Umbraco.Core.Collections.CompositeTypeTypeKey.Type1">
+            <summary>
+            Gets the first type.
+            </summary>
+        </member>
+        <member name="P:Umbraco.Core.Collections.CompositeTypeTypeKey.Type2">
+            <summary>
+            Gets the second type.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.Equals(Umbraco.Core.Collections.CompositeTypeTypeKey)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:Umbraco.Core.Collections.ConcurrentHashSet`1">
+            <summary>
+            A thread-safe representation of a <see cref="T:System.Collections.Generic.HashSet`1"/>.
+            Enumerating this collection is thread-safe and will only operate on a clone that is generated before returning the enumerator.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
+            </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <returns>
+            true if <paramref name="item"/> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. This method also returns false if <paramref name="item"/> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </returns>
+            <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param><exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.</exception>
+        </member>
+        <member name="P:Umbraco.Core.Collections.ConcurrentHashSet`1.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:System.Collections.ICollection"/>.
+            </summary>
+            <returns>
+            The number of elements contained in the <see cref="T:System.Collections.ICollection"/>.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:Umbraco.Core.Collections.ConcurrentHashSet`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.
+            </summary>
+            <returns>
+            true if the <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Add(`0)">
+            <summary>
+            Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param><exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.</exception>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.TryAdd(`0)">
+            <summary>
+            Attempts to add an item to the collection
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only. </exception>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Contains(`0)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.ICollection`1"/> contains a specific value.
+            </summary>
+            <returns>
+            true if <paramref name="item"/> is found in the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false.
+            </returns>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:System.Collections.Concurrent.IProducerConsumerCollection`1"/> to an <see cref="T:System.Array"/>, starting at a specified index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from the <see cref="T:System.Collections.Concurrent.IProducerConsumerCollection`1"/>. The array must have zero-based indexing.</param><param name="index">The zero-based index in <paramref name="array"/> at which copying begins.</param><exception cref="T:System.ArgumentNullException"><paramref name="array"/> is a null reference (Nothing in Visual Basic).</exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is less than zero.</exception><exception cref="T:System.ArgumentException"><paramref name="index"/> is equal to or greater than the length of the <paramref name="array"/> -or- The number of elements in the source <see cref="T:System.Collections.Concurrent.ConcurrentQueue`1"/> is greater than the available space from <paramref name="index"/> to the end of the destination <paramref name="array"/>.</exception>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:System.Collections.ICollection"/> to an <see cref="T:System.Array"/>, starting at a particular <see cref="T:System.Array"/> index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from <see cref="T:System.Collections.ICollection"/>. The <see cref="T:System.Array"/> must have zero-based indexing. </param><param name="index">The zero-based index in <paramref name="array"/> at which copying begins. </param><exception cref="T:System.ArgumentNullException"><paramref name="array"/> is null. </exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is less than zero. </exception><exception cref="T:System.ArgumentException"><paramref name="array"/> is multidimensional.-or- The number of elements in the source <see cref="T:System.Collections.ICollection"/> is greater than the available space from <paramref name="index"/> to the end of the destination <paramref name="array"/>. </exception><exception cref="T:System.ArgumentException">The type of the source <see cref="T:System.Collections.ICollection"/> cannot be cast automatically to the type of the destination <paramref name="array"/>. </exception><filterpriority>2</filterpriority>
+        </member>
+        <member name="T:Umbraco.Core.Collections.DeepCloneableList`1">
+            <summary>
+            A List that can be deep cloned with deep cloned elements and can reset the collection's items dirty flags
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Default behavior is CloneOnce
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.DeepClone">
+            <summary>
+            Creates a new list and adds each element as a deep cloned element if it is of type IDeepCloneable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.IsPropertyDirty(System.String)">
+            <inheritdoc />
+            <remarks>Always return false, the list has no properties that can be dirty.</remarks>
+        </member>
+        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.WasPropertyDirty(System.String)">
+            <inheritdoc />
+            <remarks>Always return false, the list has no properties that can be dirty.</remarks>
+        </member>
+        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.GetDirtyProperties">
+            <inheritdoc />
+            <remarks>Always return an empty enumerable, the list has no properties that can be dirty.</remarks>
+        </member>
+        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.GetWereDirtyProperties">
+            <remarks>Always return an empty enumerable, the list has no properties that can be dirty.</remarks>
+        </member>
+        <member name="F:Umbraco.Core.Collections.ListCloneBehavior.CloneOnce">
+            <summary>
+            When set, DeepClone will clone the items one time and the result list behavior will be None
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Collections.ListCloneBehavior.None">
+            <summary>
+            When set, DeepClone will not clone any items
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Collections.ListCloneBehavior.Always">
+            <summary>
+            When set, DeepClone will always clone all items
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.ObservableDictionary`2">
+            <summary>
+            An ObservableDictionary
+            </summary>
+            <remarks>
+            Assumes that the key will not change and is unique for each element in the collection.
+            Collection is not thread-safe, so calls should be made single-threaded.
+            </remarks>
+            <typeparam name="TValue">The type of elements contained in the BindableCollection</typeparam>
+            <typeparam name="TKey">The type of the indexing key</typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.#ctor(System.Func{`1,`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Create new ObservableDictionary
+            </summary>
+            <param name="keySelector">Selector function to create key from value</param>
+            <param name="equalityComparer">The equality comparer to use when comparing keys, or null to use the default comparer.</param>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.ClearCollectionChangedEvents">
+            <summary>
+            Clears all <see cref="!:CollectionChanged"/> event handlers
+            </summary>
+        </member>
+        <member name="P:Umbraco.Core.Collections.ObservableDictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the element with the specified key.  If setting a new value, new value must have same key.
+            </summary>
+            <param name="key">Key of element to replace</param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.Replace(`0,`1)">
+             <summary>
+             Replaces element at given key with new value.  New value must have same key.
+             </summary>
+             <param name="key">Key of element to replace</param>
+             <param name="value">New value</param>
+            
+             <exception cref="T:System.InvalidOperationException"></exception>
+             <returns>False if key not found</returns>
+        </member>
+        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.ChangeKey(`0,`0)">
+            <summary>
+            Allows us to change the key of an item
+            </summary>
+            <param name="currentKey"></param>
+            <param name="newKey"></param>
+        </member>
+        <member name="P:Umbraco.Core.Collections.ObservableDictionary`2.Keys">
+            <summary>
+            Returns all keys
+            </summary>
+        </member>
+        <member name="P:Umbraco.Core.Collections.ObservableDictionary`2.Values">
+            <summary>
+            Returns all values
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.TypeList`1">
+            <summary>
+            Represents a list of types.
+            </summary>
+            <remarks>Types in the list are, or derive from, or implement, the base type.</remarks>
+            <typeparam name="TBase">The base type.</typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.TypeList`1.Add``1">
+            <summary>
+            Adds a type to the list.
+            </summary>
+            <typeparam name="T">The type to add.</typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.TypeList`1.Contains(System.Type)">
+            <summary>
+            Determines whether a type is in the list.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Core.Collections.OrderedHashSet`1">
+            <summary>
+            A custom collection similar to HashSet{T} which only contains unique items, however this collection keeps items in order
+            and is customizable to keep the newest or oldest equatable item
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Umbraco.Core.Collections.TopoGraph`2">
+            <summary>
+            Represents a generic DAG that can be topologically sorted.
+            </summary>
+            <typeparam name="TKey">The type of the keys.</typeparam>
+            <typeparam name="TItem">The type of the items.</typeparam>
+        </member>
+        <member name="M:Umbraco.Core.Collections.TopoGraph`2.#ctor(System.Func{`1,`0},System.Func{`1,System.Collections.Generic.IEnumerable{`0}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.TopoGraph`2"/> class.
+            </summary>
+            <param name="getKey">A method that returns the key of an item.</param>
+            <param name="getDependencies">A method that returns the dependency keys of an item.</param>
+        </member>
+        <member name="M:Umbraco.Core.Collections.TopoGraph`2.AddItem(`1)">
+            <summary>
+            Adds an item to the graph.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Umbraco.Core.Collections.TopoGraph`2.AddItems(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            Adds items to the graph.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:Umbraco.Core.Collections.TopoGraph`2.GetSortedItems(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Gets the sorted items.
+            </summary>
+            <param name="throwOnCycle">A value indicating whether to throw on cycles, or just ignore the branch.</param>
+            <param name="throwOnMissing">A value indicating whether to throw on missing dependency, or just ignore the dependency.</param>
+            <param name="reverse">A value indicating whether to reverse the order.</param>
+            <returns>The (topologically) sorted items.</returns>
         </member>
         <member name="T:Umbraco.Core.Migrations.Upgrade.V_8_0_0.Models.ContentTypeDto80">
             <summary>
@@ -4035,27 +4734,27 @@
         </member>
         <member name="T:Umbraco.Core.Models.PublishedContent.UrlMode">
             <summary>
-            Specifies the type of urls that the url provider should produce, Auto is the default.
+            Specifies the type of URLs that the URL provider should produce, Auto is the default.
             </summary>
         </member>
         <member name="F:Umbraco.Core.Models.PublishedContent.UrlMode.Default">
             <summary>
-            Indicates that the url provider should do what it has been configured to do.
+            Indicates that the URL provider should do what it has been configured to do.
             </summary>
         </member>
         <member name="F:Umbraco.Core.Models.PublishedContent.UrlMode.Relative">
             <summary>
-            Indicates that the url provider should produce relative urls exclusively.
+            Indicates that the URL provider should produce relative URLs exclusively.
             </summary>
         </member>
         <member name="F:Umbraco.Core.Models.PublishedContent.UrlMode.Absolute">
             <summary>
-            Indicates that the url provider should produce absolute urls exclusively.
+            Indicates that the URL provider should produce absolute URLs exclusively.
             </summary>
         </member>
         <member name="F:Umbraco.Core.Models.PublishedContent.UrlMode.Auto">
             <summary>
-            Indicates that the url provider should determine automatically whether to return relative or absolute urls.
+            Indicates that the URL provider should determine automatically whether to return relative or absolute URLs.
             </summary>
         </member>
         <member name="T:Umbraco.Core.Models.PublishedContent.Fallback">
@@ -4163,7 +4862,7 @@
         </member>
         <member name="P:Umbraco.Core.Models.PublishedContent.PublishedCultureInfo.UrlSegment">
             <summary>
-            Gets the url segment of the item.
+            Gets the URL segment of the item.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Models.PublishedContent.PublishedCultureInfo.Date">
@@ -4690,7 +5389,7 @@
         </member>
         <member name="P:Umbraco.Core.Models.PublishedContent.IPublishedContent.UrlSegment">
             <summary>
-            Gets the url segment of the content item for the current culture.
+            Gets the URL segment of the content item for the current culture.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Models.PublishedContent.IPublishedContent.SortOrder">
@@ -4750,7 +5449,7 @@
         </member>
         <member name="P:Umbraco.Core.Models.PublishedContent.IPublishedContent.Url">
             <summary>
-            Gets the url of the content item for the current culture.
+            Gets the URL of the content item for the current culture.
             </summary>
             <remarks>
             <para>The value of this property is contextual. It depends on the 'current' request uri,
@@ -5897,7 +6596,7 @@
         </member>
         <member name="P:Umbraco.Core.Models.Entities.IMediaEntitySlim.MediaPath">
             <summary>
-            The media file's path/url
+            The media file's path/URL
             </summary>
         </member>
         <member name="T:Umbraco.Core.Models.Entities.MediaEntitySlim">
@@ -6796,6 +7495,11 @@
         <member name="F:Umbraco.Core.Models.ContentScheduleAction.Expire">
             <summary>
             Expire the document.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Core.Models.ContentScheduleCollection.ClearCollectionChangedEvents">
+            <summary>
+            Clears all <see cref="E:Umbraco.Core.Models.ContentScheduleCollection.CollectionChanged"/> event handlers
             </summary>
         </member>
         <member name="M:Umbraco.Core.Models.ContentScheduleCollection.Add(Umbraco.Core.Models.ContentSchedule)">
@@ -9624,7 +10328,7 @@
         </member>
         <member name="T:Umbraco.Core.Models.IRedirectUrl">
             <summary>
-            Represents a redirect url.
+            Represents a redirect URL.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Models.IRedirectUrl.ContentId">
@@ -9639,7 +10343,7 @@
         </member>
         <member name="P:Umbraco.Core.Models.IRedirectUrl.CreateDateUtc">
             <summary>
-            Gets or sets the redirect url creation date.
+            Gets or sets the redirect URL creation date.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Models.IRedirectUrl.Culture">
@@ -9649,7 +10353,7 @@
         </member>
         <member name="P:Umbraco.Core.Models.IRedirectUrl.Url">
             <summary>
-            Gets or sets the redirect url route.
+            Gets or sets the redirect URL route.
             </summary>
             <remarks>Is a proper Umbraco route eg /path/to/foo or 123/path/tofoo.</remarks>
         </member>
@@ -10047,12 +10751,12 @@
         </member>
         <member name="M:Umbraco.Core.Models.MediaExtensions.GetUrl(Umbraco.Core.Models.IMedia,System.String,Umbraco.Core.Logging.ILogger)">
             <summary>
-            Gets the url of a media item.
+            Gets the URL of a media item.
             </summary>
         </member>
         <member name="M:Umbraco.Core.Models.MediaExtensions.GetUrls(Umbraco.Core.Models.IMedia,Umbraco.Core.Configuration.UmbracoSettings.IContentSection,Umbraco.Core.Logging.ILogger)">
             <summary>
-            Gets the urls of a media item.
+            Gets the URLs of a media item.
             </summary>
         </member>
         <member name="T:Umbraco.Core.Models.MediaType">
@@ -10575,6 +11279,11 @@
             <returns><c>true</c> if the collection contains the specified name; otherwise, <c>false</c>.</returns>
             <remarks></remarks>
         </member>
+        <member name="M:Umbraco.Core.Models.PropertyGroupCollection.ClearCollectionChangedEvents">
+            <summary>
+            Clears all <see cref="E:Umbraco.Core.Models.PropertyGroupCollection.CollectionChanged"/> event handlers
+            </summary>
+        </member>
         <member name="T:Umbraco.Core.Models.PropertyType">
             <summary>
             Represents a property type.
@@ -10669,6 +11378,11 @@
         <member name="P:Umbraco.Core.Models.PropertyType.MandatoryMessage">
             <summary>
             Gets or sets the custom validation message used when a value for this PropertyType is required
+            </summary>
+        </member>
+        <member name="P:Umbraco.Core.Models.PropertyType.LabelOnTop">
+            <summary>
+            Gets or sets a value indicating whether the label of this property type should be displayed on top.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Models.PropertyType.SortOrder">
@@ -10777,6 +11491,11 @@
             <returns><c>true</c> if the collection contains the specified alias; otherwise, <c>false</c>.</returns>
             <remarks></remarks>
         </member>
+        <member name="M:Umbraco.Core.Models.PropertyTypeCollection.ClearCollectionChangedEvents">
+            <summary>
+            Clears all <see cref="E:Umbraco.Core.Models.PropertyTypeCollection.CollectionChanged"/> event handlers
+            </summary>
+        </member>
         <member name="T:Umbraco.Core.Models.PublishedState">
             <summary>
             The states of a content item.
@@ -10807,36 +11526,127 @@
             is saved, its state changes to <value>Unpublished</value>.</remarks>
         </member>
         <member name="T:Umbraco.Core.Models.Range`1">
-            <typeparam name="T">Generic parameter.</typeparam>
+            <summary>
+            Represents a range with a minimum and maximum value.
+            </summary>
+            <typeparam name="T">The type of the minimum and maximum values.</typeparam>
+            <seealso cref="!:System.IEquatable&lt;Umbraco.Core.Models.Range&lt;T&gt;&gt;" />
         </member>
         <member name="P:Umbraco.Core.Models.Range`1.Minimum">
-            <summary>Minimum value of the range.</summary>
+            <summary>
+            Gets or sets the minimum value.
+            </summary>
+            <value>
+            The minimum value.
+            </value>
         </member>
         <member name="P:Umbraco.Core.Models.Range`1.Maximum">
-            <summary>Maximum value of the range.</summary>
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
         </member>
         <member name="M:Umbraco.Core.Models.Range`1.ToString">
-            <summary>Presents the Range in readable format.</summary>
-            <returns>String representation of the Range</returns>
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.Range`1.ToString(System.String,System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="format">A composite format string for a single value (minimum and maximum are equal). Use {0} for the minimum and {1} for the maximum value.</param>
+            <param name="formatRange">A composite format string for the range values. Use {0} for the minimum and {1} for the maximum value.</param>
+            <param name="provider">An object that supplies culture-specific formatting information.</param>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.Range`1.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="format">A composite format string for the range values. Use {0} for the minimum and {1} for the maximum value.</param>
+            <param name="provider">An object that supplies culture-specific formatting information.</param>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
         </member>
         <member name="M:Umbraco.Core.Models.Range`1.IsValid">
-            <summary>Determines if the range is valid.</summary>
-            <returns>True if range is valid, else false</returns>
+            <summary>
+            Determines whether this range is valid (the minimum value is lower than or equal to the maximum value).
+            </summary>
+            <returns>
+              <c>true</c> if this range is valid; otherwise, <c>false</c>.
+            </returns>
         </member>
         <member name="M:Umbraco.Core.Models.Range`1.ContainsValue(`0)">
-            <summary>Determines if the provided value is inside the range.</summary>
-            <param name="value">The value to test</param>
-            <returns>True if the value is inside Range, else false</returns>
+            <summary>
+            Determines whether this range contains the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+              <c>true</c> if this range contains the specified value; otherwise, <c>false</c>.
+            </returns>
         </member>
         <member name="M:Umbraco.Core.Models.Range`1.IsInsideRange(Umbraco.Core.Models.Range{`0})">
-            <summary>Determines if this Range is inside the bounds of another range.</summary>
-            <param name="Range">The parent range to test on</param>
-            <returns>True if range is inclusive, else false</returns>
+            <summary>
+            Determines whether this range is inside the specified range.
+            </summary>
+            <param name="range">The range.</param>
+            <returns>
+              <c>true</c> if this range is inside the specified range; otherwise, <c>false</c>.
+            </returns>
         </member>
         <member name="M:Umbraco.Core.Models.Range`1.ContainsRange(Umbraco.Core.Models.Range{`0})">
-            <summary>Determines if another range is inside the bounds of this range.</summary>
-            <param name="Range">The child range to test</param>
-            <returns>True if range is inside, else false</returns>
+            <summary>
+            Determines whether this range contains the specified range.
+            </summary>
+            <param name="range">The range.</param>
+            <returns>
+              <c>true</c> if this range contains the specified range; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.Range`1.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.Range`1.Equals(Umbraco.Core.Models.Range{`0})">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+              <see langword="true" /> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.Range`1.Equals(`0,`0)">
+            <summary>
+            Determines whether the specified <paramref name="minimum" /> and <paramref name="maximum" /> values are equal to this instance values.
+            </summary>
+            <param name="minimum">The minimum value.</param>
+            <param name="maximum">The maximum value.</param>
+            <returns>
+              <c>true</c> if the specified <paramref name="minimum" /> and <paramref name="maximum" /> values are equal to this instance values; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.Range`1.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+            </returns>
         </member>
         <member name="T:Umbraco.Core.Models.RedirectUrl">
             <summary>
@@ -10971,7 +11781,7 @@
             Initializes a new instance of the <see cref="T:Umbraco.Core.Models.ServerRegistration"/> class.
             </summary>
             <param name="id">The unique id of the server registration.</param>
-            <param name="serverAddress">The server url.</param>
+            <param name="serverAddress">The server URL.</param>
             <param name="serverIdentity">The unique server identity.</param>
             <param name="registered">The date and time the registration was created.</param>
             <param name="accessed">The date and time the registration was last accessed.</param>
@@ -10982,13 +11792,13 @@
             <summary>
             Initializes a new instance of the <see cref="T:Umbraco.Core.Models.ServerRegistration"/> class.
             </summary>
-            <param name="serverAddress">The server url.</param>
+            <param name="serverAddress">The server URL.</param>
             <param name="serverIdentity">The unique server identity.</param>
             <param name="registered">The date and time the registration was created.</param>
         </member>
         <member name="P:Umbraco.Core.Models.ServerRegistration.ServerAddress">
             <summary>
-            Gets or sets the server url.
+            Gets or sets the server URL.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Models.ServerRegistration.ServerIdentity">
@@ -12870,72 +13680,80 @@
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.Get(System.String,System.Guid,System.String)">
             <summary>
-            Gets a redirect url.
+            Gets a redirect URL.
             </summary>
-            <param name="url">The Umbraco redirect url route.</param>
+            <param name="url">The Umbraco redirect URL route.</param>
             <param name="contentKey">The content unique key.</param>
             <param name="culture">The culture.</param>
             <returns></returns>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.Delete(System.Guid)">
             <summary>
-            Deletes a redirect url.
+            Deletes a redirect URL.
             </summary>
-            <param name="id">The redirect url identifier.</param>
+            <param name="id">The redirect URL identifier.</param>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.DeleteAll">
             <summary>
-            Deletes all redirect urls.
+            Deletes all redirect URLs.
             </summary>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.DeleteContentUrls(System.Guid)">
             <summary>
-            Deletes all redirect urls for a given content.
+            Deletes all redirect URLs for a given content.
             </summary>
             <param name="contentKey">The content unique key.</param>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.GetMostRecentUrl(System.String)">
             <summary>
-            Gets the most recent redirect url corresponding to an Umbraco redirect url route.
+            Gets the most recent redirect URL corresponding to an Umbraco redirect URL route.
             </summary>
-            <param name="url">The Umbraco redirect url route.</param>
-            <returns>The most recent redirect url corresponding to the route.</returns>
+            <param name="url">The Umbraco redirect URL route.</param>
+            <returns>The most recent redirect URL corresponding to the route.</returns>
+        </member>
+        <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.GetMostRecentUrl(System.String,System.String)">
+            <summary>
+            Gets the most recent redirect URL corresponding to an Umbraco redirect URL route.
+            </summary>
+            <param name="url">The Umbraco redirect URL route.</param>
+            <param name="culture">The culture the domain is associated with</param>
+            <returns>The most recent redirect URL corresponding to the route.</returns>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.GetContentUrls(System.Guid)">
             <summary>
-            Gets all redirect urls for a content item.
+            Gets all redirect URLs for a content item.
             </summary>
             <param name="contentKey">The content unique key.</param>
-            <returns>All redirect urls for the content item.</returns>
+            <returns>All redirect URLs for the content item.</returns>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.GetAllUrls(System.Int64,System.Int32,System.Int64@)">
             <summary>
-            Gets all redirect urls.
+            Gets all redirect URLs.
             </summary>
             <param name="pageIndex">The page index.</param>
             <param name="pageSize">The page size.</param>
-            <param name="total">The total count of redirect urls.</param>
-            <returns>The redirect urls.</returns>
+            <param name="total">The total count of redirect URLs.</param>
+            <returns>The redirect URLs.</returns>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.GetAllUrls(System.Int32,System.Int64,System.Int32,System.Int64@)">
             <summary>
-            Gets all redirect urls below a given content item.
+            Gets all redirect URLs below a given content item.
             </summary>
             <param name="rootContentId">The content unique identifier.</param>
             <param name="pageIndex">The page index.</param>
             <param name="pageSize">The page size.</param>
-            <param name="total">The total count of redirect urls.</param>
-            <returns>The redirect urls.</returns>
+            <param name="total">The total count of redirect URLs.</param>
+            <returns>The redirect URLs.</returns>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRedirectUrlRepository.SearchUrls(System.String,System.Int64,System.Int32,System.Int64@)">
             <summary>
-            Searches for all redirect urls that contain a given search term in their URL property.
+            Searches for all redirect URLs that contain a given search term in their URL property.
             </summary>
             <param name="searchTerm">The term to search for.</param>
             <param name="pageIndex">The page index.</param>
             <param name="pageSize">The page size.</param>
-            <param name="total">The total count of redirect urls.</param>
-            <returns>The redirect urls.</returns>
+            <param name="total">The total count of redirect URLs.</param>
+            <returns>The redirect URLs.</returns>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.IRelationRepository.Save(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
@@ -17066,6 +17884,37 @@
             Gets the count of all executed Sql statements.
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Persistence.UmbracoDatabaseExtensions.HasTable(Umbraco.Core.Persistence.IUmbracoDatabase,System.String)">
+            <summary>
+            Returns true if the database contains the specified table
+            </summary>
+            <param name="database"></param>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Persistence.UmbracoDatabaseExtensions.IsDatabaseEmpty(Umbraco.Core.Persistence.IUmbracoDatabase)">
+            <summary>
+            Returns true if the database contains no tables
+            </summary>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Persistence.UmbracoDatabaseExtensions.ValidateSchema(Umbraco.Core.Persistence.IUmbracoDatabase,Umbraco.Core.Logging.ILogger)">
+            <summary>
+            Returns the <see cref="T:Umbraco.Core.Migrations.Install.DatabaseSchemaResult"/> for the database
+            </summary>
+            <param name="database"></param>
+            <param name="logger"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Persistence.UmbracoDatabaseExtensions.IsUmbracoInstalled(Umbraco.Core.Persistence.IUmbracoDatabase,Umbraco.Core.Logging.ILogger)">
+            <summary>
+            Returns true if Umbraco database tables are detected to be installed
+            </summary>
+            <param name="database"></param>
+            <param name="logger"></param>
+            <returns></returns>
+        </member>
         <member name="T:Umbraco.Core.Persistence.UmbracoDatabaseFactory">
             <summary>
             Default implementation of <see cref="T:Umbraco.Core.Persistence.IUmbracoDatabaseFactory"/>.
@@ -17766,22 +18615,22 @@
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue.GetCropUrl(System.String,System.Boolean,System.Boolean,System.String)">
             <summary>
-            Gets the value image url for a specified crop.
+            Gets the value image URL for a specified crop.
             </summary>
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue.GetCropUrl(System.String,Umbraco.Core.Models.IImageUrlGenerator,System.Boolean,System.Boolean,System.String)">
             <summary>
-            Gets the value image url for a specified crop.
+            Gets the value image URL for a specified crop.
             </summary>
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue.GetCropUrl(System.Int32,System.Int32,System.Boolean,System.String)">
             <summary>
-            Gets the value image url for a specific width and height.
+            Gets the value image URL for a specific width and height.
             </summary>
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue.GetCropUrl(System.Int32,System.Int32,Umbraco.Core.Models.IImageUrlGenerator,System.Boolean,System.String)">
             <summary>
-            Gets the value image url for a specific width and height.
+            Gets the value image URL for a specific width and height.
             </summary>
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue.HasFocalPoint">
@@ -18748,24 +19597,24 @@
             <returns></returns>
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.DataValueEditor.FromEditor(Umbraco.Core.Models.Editors.ContentPropertyData,System.Object)">
-             <summary>
-             A method to deserialize the string value that has been saved in the content editor
-             to an object to be stored in the database.
-             </summary>
-             <param name="editorValue"></param>
-             <param name="currentValue">
-             The current value that has been persisted to the database for this editor. This value may be useful for
-             how the value then get's deserialized again to be re-persisted. In most cases it will probably not be used.
-             </param>
-            <param name="languageId"></param>
-            <param name="segment"></param>
-            <returns></returns>
-             <remarks>
-             By default this will attempt to automatically convert the string value to the value type supplied by ValueType.
+              <summary>
+              A method to deserialize the string value that has been saved in the content editor
+              to an object to be stored in the database.
+              </summary>
+              <param name="editorValue"></param>
+              <param name="currentValue">
+              The current value that has been persisted to the database for this editor. This value may be useful for
+              how the value then get's deserialized again to be re-persisted. In most cases it will probably not be used.
+              </param>
+             <param name="languageId"></param>
+             <param name="segment"></param>
+             <returns></returns>
+              <remarks>
+              By default this will attempt to automatically convert the string value to the value type supplied by ValueType.
             
-             If overridden then the object returned must match the type supplied in the ValueType, otherwise persisting the
-             value to the DB will fail when it tries to validate the value type.
-             </remarks>
+              If overridden then the object returned must match the type supplied in the ValueType, otherwise persisting the
+              value to the DB will fail when it tries to validate the value type.
+              </remarks>
         </member>
         <member name="M:Umbraco.Core.PropertyEditors.DataValueEditor.ToEditor(Umbraco.Core.Models.Property,Umbraco.Core.Services.IDataTypeService,System.String,System.String)">
             <summary>
@@ -21661,7 +22510,7 @@
             <summary>
             Touches a server to mark it as active; deactivate stale servers.
             </summary>
-            <param name="serverAddress">The server url.</param>
+            <param name="serverAddress">The server URL.</param>
             <param name="serverIdentity">The server unique identity.</param>
             <param name="staleTimeout">The time after which a server is considered stale.</param>
         </member>
@@ -22351,7 +23200,7 @@
             This is required because in the case of creating/modifying a content type because new property types being added to it are not yet persisted so cannot
             be looked up via the db, they need to be passed in.
             </param>
-            <param name="isElement">Wether the composite content types should be applicable for an element type</param>
+            <param name="isElement">Whether the composite content types should be applicable for an element type</param>
             <returns></returns>
         </member>
         <member name="M:Umbraco.Core.Services.ContentTypeServiceExtensions.GetDirectOrIndirect(Umbraco.Core.Models.IContentTypeComposition)">
@@ -24893,78 +25742,86 @@
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.Register(System.String,System.Guid,System.String)">
             <summary>
-            Registers a redirect url.
+            Registers a redirect URL.
             </summary>
-            <param name="url">The Umbraco url route.</param>
+            <param name="url">The Umbraco URL route.</param>
             <param name="contentKey">The content unique key.</param>
             <param name="culture">The culture.</param>
             <remarks>Is a proper Umbraco route eg /path/to/foo or 123/path/tofoo.</remarks>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.DeleteContentRedirectUrls(System.Guid)">
             <summary>
-            Deletes all redirect urls for a given content.
+            Deletes all redirect URLs for a given content.
             </summary>
             <param name="contentKey">The content unique key.</param>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.Delete(Umbraco.Core.Models.IRedirectUrl)">
             <summary>
-            Deletes a redirect url.
+            Deletes a redirect URL.
             </summary>
-            <param name="redirectUrl">The redirect url to delete.</param>
+            <param name="redirectUrl">The redirect URL to delete.</param>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.Delete(System.Guid)">
             <summary>
-            Deletes a redirect url.
+            Deletes a redirect URL.
             </summary>
-            <param name="id">The redirect url identifier.</param>
+            <param name="id">The redirect URL identifier.</param>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.DeleteAll">
             <summary>
-            Deletes all redirect urls.
+            Deletes all redirect URLs.
             </summary>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.GetMostRecentRedirectUrl(System.String)">
             <summary>
-            Gets the most recent redirect urls corresponding to an Umbraco redirect url route.
+            Gets the most recent redirect URLs corresponding to an Umbraco redirect URL route.
             </summary>
-            <param name="url">The Umbraco redirect url route.</param>
-            <returns>The most recent redirect urls corresponding to the route.</returns>
+            <param name="url">The Umbraco redirect URL route.</param>
+            <returns>The most recent redirect URLs corresponding to the route.</returns>
+        </member>
+        <member name="M:Umbraco.Core.Services.IRedirectUrlService.GetMostRecentRedirectUrl(System.String,System.String)">
+            <summary>
+            Gets the most recent redirect URLs corresponding to an Umbraco redirect URL route.
+            </summary>
+            <param name="url">The Umbraco redirect URL route.</param>
+            <param name="culture">The culture of the request.</param>
+            <returns>The most recent redirect URLs corresponding to the route.</returns>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.GetContentRedirectUrls(System.Guid)">
             <summary>
-            Gets all redirect urls for a content item.
+            Gets all redirect URLs for a content item.
             </summary>
             <param name="contentKey">The content unique key.</param>
-            <returns>All redirect urls for the content item.</returns>
+            <returns>All redirect URLs for the content item.</returns>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.GetAllRedirectUrls(System.Int64,System.Int32,System.Int64@)">
             <summary>
-            Gets all redirect urls.
+            Gets all redirect URLs.
             </summary>
             <param name="pageIndex">The page index.</param>
             <param name="pageSize">The page size.</param>
-            <param name="total">The total count of redirect urls.</param>
-            <returns>The redirect urls.</returns>
+            <param name="total">The total count of redirect URLs.</param>
+            <returns>The redirect URLs.</returns>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.GetAllRedirectUrls(System.Int32,System.Int64,System.Int32,System.Int64@)">
             <summary>
-            Gets all redirect urls below a given content item.
+            Gets all redirect URLs below a given content item.
             </summary>
             <param name="rootContentId">The content unique identifier.</param>
             <param name="pageIndex">The page index.</param>
             <param name="pageSize">The page size.</param>
-            <param name="total">The total count of redirect urls.</param>
-            <returns>The redirect urls.</returns>
+            <param name="total">The total count of redirect URLs.</param>
+            <returns>The redirect URLs.</returns>
         </member>
         <member name="M:Umbraco.Core.Services.IRedirectUrlService.SearchRedirectUrls(System.String,System.Int64,System.Int32,System.Int64@)">
             <summary>
-            Searches for all redirect urls that contain a given search term in their URL property.
+            Searches for all redirect URLs that contain a given search term in their URL property.
             </summary>
             <param name="searchTerm">The term to search for.</param>
             <param name="pageIndex">The page index.</param>
             <param name="pageSize">The page size.</param>
-            <param name="total">The total count of redirect urls.</param>
-            <returns>The redirect urls.</returns>
+            <param name="total">The total count of redirect URLs.</param>
+            <returns>The redirect URLs.</returns>
         </member>
         <member name="M:Umbraco.Core.Services.IRelationService.GetById(System.Int32)">
             <summary>
@@ -25301,7 +26158,7 @@
             <summary>
             Touches a server to mark it as active; deactivate stale servers.
             </summary>
-            <param name="serverAddress">The server url.</param>
+            <param name="serverAddress">The server URL.</param>
             <param name="serverIdentity">The server unique identity.</param>
             <param name="staleTimeout">The time after which a server is considered stale.</param>
         </member>
@@ -26364,7 +27221,7 @@
         </member>
         <member name="M:Umbraco.Core.Runtime.SqlMainDomLock.InsertLockRecord(System.String,Umbraco.Core.Persistence.IUmbracoDatabase)">
             <summary>
-            Inserts or updates the key/value row 
+            Inserts or updates the key/value row
             </summary>
         </member>
         <member name="M:Umbraco.Core.Runtime.SqlMainDomLock.IsMainDomValue(System.String,Umbraco.Core.Persistence.IUmbracoDatabase)">
@@ -27804,329 +28661,6 @@
             <summary>
             Attribute to associate a GUID string and Type with an UmbracoObjectType Enum value
             </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.CompositeNStringNStringKey">
-            <summary>
-            Represents a composite key of (string, string) for fast dictionaries.
-            </summary>
-            <remarks>
-            <para>The string parts of the key are case-insensitive.</para>
-            <para>Null is a valid value for both parts.</para>
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeNStringNStringKey.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeNStringNStringKey"/> struct.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.CompositeStringStringKey">
-            <summary>
-            Represents a composite key of (string, string) for fast dictionaries.
-            </summary>
-            <remarks>
-            <para>The string parts of the key are case-insensitive.</para>
-            <para>Null is NOT a valid value for neither parts.</para>
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeStringStringKey.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeStringStringKey"/> struct.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.CompositeIntStringKey">
-            <summary>
-            Represents a composite key of (int, string) for fast dictionaries.
-            </summary>
-            <remarks>
-            <para>The integer part of the key must be greater than, or equal to, zero.</para>
-            <para>The string part of the key is case-insensitive.</para>
-            <para>Null is a valid value for both parts.</para>
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeIntStringKey.#ctor(System.Nullable{System.Int32},System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeIntStringKey"/> struct.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.CompositeTypeTypeKey">
-            <summary>
-            Represents a composite key of (Type, Type) for fast dictionaries.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.#ctor(System.Type,System.Type)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.CompositeTypeTypeKey"/> struct.
-            </summary>
-        </member>
-        <member name="P:Umbraco.Core.Collections.CompositeTypeTypeKey.Type1">
-            <summary>
-            Gets the first type.
-            </summary>
-        </member>
-        <member name="P:Umbraco.Core.Collections.CompositeTypeTypeKey.Type2">
-            <summary>
-            Gets the second type.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.Equals(Umbraco.Core.Collections.CompositeTypeTypeKey)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.Equals(System.Object)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Umbraco.Core.Collections.CompositeTypeTypeKey.GetHashCode">
-            <inheritdoc/>
-        </member>
-        <member name="T:Umbraco.Core.Collections.ConcurrentHashSet`1">
-            <summary>
-            A thread-safe representation of a <see cref="T:System.Collections.Generic.HashSet`1"/>.
-            Enumerating this collection is thread-safe and will only operate on a clone that is generated before returning the enumerator.
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.GetEnumerator">
-            <summary>
-            Returns an enumerator that iterates through the collection.
-            </summary>
-            <returns>
-            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
-            </returns>
-            <filterpriority>1</filterpriority>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.System#Collections#IEnumerable#GetEnumerator">
-            <summary>
-            Returns an enumerator that iterates through a collection.
-            </summary>
-            <returns>
-            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
-            </returns>
-            <filterpriority>2</filterpriority>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Remove(`0)">
-            <summary>
-            Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
-            </summary>
-            <returns>
-            true if <paramref name="item"/> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. This method also returns false if <paramref name="item"/> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1"/>.
-            </returns>
-            <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param><exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.</exception>
-        </member>
-        <member name="P:Umbraco.Core.Collections.ConcurrentHashSet`1.Count">
-            <summary>
-            Gets the number of elements contained in the <see cref="T:System.Collections.ICollection"/>.
-            </summary>
-            <returns>
-            The number of elements contained in the <see cref="T:System.Collections.ICollection"/>.
-            </returns>
-            <filterpriority>2</filterpriority>
-        </member>
-        <member name="P:Umbraco.Core.Collections.ConcurrentHashSet`1.IsReadOnly">
-            <summary>
-            Gets a value indicating whether the <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.
-            </summary>
-            <returns>
-            true if the <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only; otherwise, false.
-            </returns>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Add(`0)">
-            <summary>
-            Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1"/>.
-            </summary>
-            <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param><exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.</exception>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.TryAdd(`0)">
-            <summary>
-            Attempts to add an item to the collection
-            </summary>
-            <param name="item"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Clear">
-            <summary>
-            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
-            </summary>
-            <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only. </exception>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.Contains(`0)">
-            <summary>
-            Determines whether the <see cref="T:System.Collections.Generic.ICollection`1"/> contains a specific value.
-            </summary>
-            <returns>
-            true if <paramref name="item"/> is found in the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false.
-            </returns>
-            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.CopyTo(`0[],System.Int32)">
-            <summary>
-            Copies the elements of the <see cref="T:System.Collections.Concurrent.IProducerConsumerCollection`1"/> to an <see cref="T:System.Array"/>, starting at a specified index.
-            </summary>
-            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from the <see cref="T:System.Collections.Concurrent.IProducerConsumerCollection`1"/>. The array must have zero-based indexing.</param><param name="index">The zero-based index in <paramref name="array"/> at which copying begins.</param><exception cref="T:System.ArgumentNullException"><paramref name="array"/> is a null reference (Nothing in Visual Basic).</exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is less than zero.</exception><exception cref="T:System.ArgumentException"><paramref name="index"/> is equal to or greater than the length of the <paramref name="array"/> -or- The number of elements in the source <see cref="T:System.Collections.Concurrent.ConcurrentQueue`1"/> is greater than the available space from <paramref name="index"/> to the end of the destination <paramref name="array"/>.</exception>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ConcurrentHashSet`1.CopyTo(System.Array,System.Int32)">
-            <summary>
-            Copies the elements of the <see cref="T:System.Collections.ICollection"/> to an <see cref="T:System.Array"/>, starting at a particular <see cref="T:System.Array"/> index.
-            </summary>
-            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from <see cref="T:System.Collections.ICollection"/>. The <see cref="T:System.Array"/> must have zero-based indexing. </param><param name="index">The zero-based index in <paramref name="array"/> at which copying begins. </param><exception cref="T:System.ArgumentNullException"><paramref name="array"/> is null. </exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is less than zero. </exception><exception cref="T:System.ArgumentException"><paramref name="array"/> is multidimensional.-or- The number of elements in the source <see cref="T:System.Collections.ICollection"/> is greater than the available space from <paramref name="index"/> to the end of the destination <paramref name="array"/>. </exception><exception cref="T:System.ArgumentException">The type of the source <see cref="T:System.Collections.ICollection"/> cannot be cast automatically to the type of the destination <paramref name="array"/>. </exception><filterpriority>2</filterpriority>
-        </member>
-        <member name="T:Umbraco.Core.Collections.DeepCloneableList`1">
-            <summary>
-            A List that can be deep cloned with deep cloned elements and can reset the collection's items dirty flags
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
-            <summary>
-            Default behavior is CloneOnce
-            </summary>
-            <param name="collection"></param>
-        </member>
-        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.DeepClone">
-            <summary>
-            Creates a new list and adds each element as a deep cloned element if it is of type IDeepCloneable
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.IsPropertyDirty(System.String)">
-            <inheritdoc />
-            <remarks>Always return false, the list has no properties that can be dirty.</remarks>
-        </member>
-        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.WasPropertyDirty(System.String)">
-            <inheritdoc />
-            <remarks>Always return false, the list has no properties that can be dirty.</remarks>
-        </member>
-        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.GetDirtyProperties">
-            <inheritdoc />
-            <remarks>Always return an empty enumerable, the list has no properties that can be dirty.</remarks>
-        </member>
-        <member name="M:Umbraco.Core.Collections.DeepCloneableList`1.GetWereDirtyProperties">
-            <remarks>Always return an empty enumerable, the list has no properties that can be dirty.</remarks>
-        </member>
-        <member name="F:Umbraco.Core.Collections.ListCloneBehavior.CloneOnce">
-            <summary>
-            When set, DeepClone will clone the items one time and the result list behavior will be None
-            </summary>
-        </member>
-        <member name="F:Umbraco.Core.Collections.ListCloneBehavior.None">
-            <summary>
-            When set, DeepClone will not clone any items
-            </summary>
-        </member>
-        <member name="F:Umbraco.Core.Collections.ListCloneBehavior.Always">
-            <summary>
-            When set, DeepClone will always clone all items
-            </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.ObservableDictionary`2">
-            <summary>
-            An ObservableDictionary
-            </summary>
-            <remarks>
-            Assumes that the key will not change and is unique for each element in the collection.
-            Collection is not thread-safe, so calls should be made single-threaded.
-            </remarks>
-            <typeparam name="TValue">The type of elements contained in the BindableCollection</typeparam>
-            <typeparam name="TKey">The type of the indexing key</typeparam>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.#ctor(System.Func{`1,`0},System.Collections.Generic.IEqualityComparer{`0})">
-            <summary>
-            Create new ObservableDictionary
-            </summary>
-            <param name="keySelector">Selector function to create key from value</param>
-            <param name="equalityComparer">The equality comparer to use when comparing keys, or null to use the default comparer.</param>
-        </member>
-        <member name="P:Umbraco.Core.Collections.ObservableDictionary`2.Item(`0)">
-            <summary>
-            Gets or sets the element with the specified key.  If setting a new value, new value must have same key.
-            </summary>
-            <param name="key">Key of element to replace</param>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.Replace(`0,`1)">
-             <summary>
-             Replaces element at given key with new value.  New value must have same key.
-             </summary>
-             <param name="key">Key of element to replace</param>
-             <param name="value">New value</param>
-            
-             <exception cref="T:System.InvalidOperationException"></exception>
-             <returns>False if key not found</returns>
-        </member>
-        <member name="M:Umbraco.Core.Collections.ObservableDictionary`2.ChangeKey(`0,`0)">
-            <summary>
-            Allows us to change the key of an item
-            </summary>
-            <param name="currentKey"></param>
-            <param name="newKey"></param>
-        </member>
-        <member name="P:Umbraco.Core.Collections.ObservableDictionary`2.Keys">
-            <summary>
-            Returns all keys
-            </summary>
-        </member>
-        <member name="P:Umbraco.Core.Collections.ObservableDictionary`2.Values">
-            <summary>
-            Returns all values
-            </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.TypeList`1">
-            <summary>
-            Represents a list of types.
-            </summary>
-            <remarks>Types in the list are, or derive from, or implement, the base type.</remarks>
-            <typeparam name="TBase">The base type.</typeparam>
-        </member>
-        <member name="M:Umbraco.Core.Collections.TypeList`1.Add``1">
-            <summary>
-            Adds a type to the list.
-            </summary>
-            <typeparam name="T">The type to add.</typeparam>
-        </member>
-        <member name="M:Umbraco.Core.Collections.TypeList`1.Contains(System.Type)">
-            <summary>
-            Determines whether a type is in the list.
-            </summary>
-        </member>
-        <member name="T:Umbraco.Core.Collections.OrderedHashSet`1">
-            <summary>
-            A custom collection similar to HashSet{T} which only contains unique items, however this collection keeps items in order
-            and is customizable to keep the newest or oldest equatable item
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="T:Umbraco.Core.Collections.TopoGraph`2">
-            <summary>
-            Represents a generic DAG that can be topologically sorted.
-            </summary>
-            <typeparam name="TKey">The type of the keys.</typeparam>
-            <typeparam name="TItem">The type of the items.</typeparam>
-        </member>
-        <member name="M:Umbraco.Core.Collections.TopoGraph`2.#ctor(System.Func{`1,`0},System.Func{`1,System.Collections.Generic.IEnumerable{`0}})">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Collections.TopoGraph`2"/> class.
-            </summary>
-            <param name="getKey">A method that returns the key of an item.</param>
-            <param name="getDependencies">A method that returns the dependency keys of an item.</param>
-        </member>
-        <member name="M:Umbraco.Core.Collections.TopoGraph`2.AddItem(`1)">
-            <summary>
-            Adds an item to the graph.
-            </summary>
-            <param name="item">The item.</param>
-        </member>
-        <member name="M:Umbraco.Core.Collections.TopoGraph`2.AddItems(System.Collections.Generic.IEnumerable{`1})">
-            <summary>
-            Adds items to the graph.
-            </summary>
-            <param name="items">The items.</param>
-        </member>
-        <member name="M:Umbraco.Core.Collections.TopoGraph`2.GetSortedItems(System.Boolean,System.Boolean,System.Boolean)">
-            <summary>
-            Gets the sorted items.
-            </summary>
-            <param name="throwOnCycle">A value indicating whether to throw on cycles, or just ignore the branch.</param>
-            <param name="throwOnMissing">A value indicating whether to throw on missing dependency, or just ignore the dependency.</param>
-            <param name="reverse">A value indicating whether to reverse the order.</param>
-            <returns>The (topologically) sorted items.</returns>
         </member>
         <member name="T:Umbraco.Core.Composing.ComponentComposer`1">
             <summary>
@@ -30006,7 +30540,7 @@
         </member>
         <member name="M:Umbraco.Core.CompositionExtensions.UrlSegmentProviders(Umbraco.Core.Composing.Composition)">
             <summary>
-            Gets the url segment providers collection builder.
+            Gets the URL segment providers collection builder.
             </summary>
             <param name="composition">The composition.</param>
         </member>
@@ -30224,334 +30758,6 @@
             <summary>
             Registers a unique service with an implementing instance.
             </summary>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.PanicException">
-            <summary>
-            Represents an internal exception that in theory should never been thrown, it is only thrown in circumstances that should never happen.
-            </summary>
-            <seealso cref="T:System.Exception" />
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
-            </summary>
-            <param name="message">The message that describes the error.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
-            </summary>
-            <param name="message">The error message that explains the reason for the exception.</param>
-            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.PanicException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.PanicException" /> class.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException">
-            <summary>
-            The exception that is thrown when a null reference, or an empty argument, is passed to a method that does not accept it as a valid argument.
-            </summary>
-            <seealso cref="T:System.ArgumentNullException" />
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class with the name of the parameter that caused this exception.
-            </summary>
-            <param name="paramName">The named of the parameter that caused the exception.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class with a specified error message and the name of the parameter that caused this exception.
-            </summary>
-            <param name="paramName">The named of the parameter that caused the exception.</param>
-            <param name="message">A message that describes the error.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class.
-            </summary>
-            <param name="message">The error message that explains the reason for this exception.</param>
-            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.ArgumentNullOrEmptyException" /> class.
-            </summary>
-            <param name="info">The object that holds the serialized object data.</param>
-            <param name="context">An object that describes the source or destination of the serialized data.</param>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.AuthorizationException">
-            <summary>
-            The exception that is thrown when authorization failed.
-            </summary>
-            <seealso cref="T:System.Exception" />
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
-            </summary>
-            <param name="message">The message that describes the error.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
-            </summary>
-            <param name="message">The error message that explains the reason for the exception.</param>
-            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.AuthorizationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.AuthorizationException" /> class.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.BootFailedException">
-            <summary>
-            An exception that is thrown if the Umbraco application cannot boot.
-            </summary>
-            <seealso cref="T:System.Exception" />
-        </member>
-        <member name="F:Umbraco.Core.Exceptions.BootFailedException.DefaultMessage">
-            <summary>
-            Defines the default boot failed exception message.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.BootFailedException" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message.
-            </summary>
-            <param name="message">The message that describes the error.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message
-            and a reference to the inner exception which is the cause of this exception.
-            </summary>
-            <param name="message">The message that describes the error.</param>
-            <param name="innerException">The inner exception, or null.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.BootFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.BootFailedException" /> class.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.BootFailedException.Rethrow(Umbraco.Core.Exceptions.BootFailedException)">
-            <summary>
-            Rethrows a captured <see cref="T:Umbraco.Core.Exceptions.BootFailedException" />.
-            </summary>
-            <param name="bootFailedException">The boot failed exception.</param>
-            <exception cref="T:Umbraco.Core.Exceptions.BootFailedException">
-            </exception>
-            <remarks>
-            The exception can be null, in which case a default message is used.
-            </remarks>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.DataOperationException`1">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <seealso cref="T:System.Exception" />
-        </member>
-        <member name="P:Umbraco.Core.Exceptions.DataOperationException`1.Operation">
-            <summary>
-            Gets the operation.
-            </summary>
-            <value>
-            The operation.
-            </value>
-            <remarks>
-            This object should be serializable to prevent a <see cref="T:System.Runtime.Serialization.SerializationException" /> to be thrown.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
-            </summary>
-            <param name="message">The message that describes the error.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
-            </summary>
-            <param name="message">The error message that explains the reason for the exception.</param>
-            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(`0)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
-            </summary>
-            <param name="operation">The operation.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(`0,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
-            </summary>
-            <param name="operation">The operation.</param>
-            <param name="message">The message.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.DataOperationException`1" /> class.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-            <exception cref="T:System.ArgumentNullException">info</exception>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.DataOperationException`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-            <exception cref="T:System.ArgumentNullException">info</exception>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.InvalidCompositionException">
-            <summary>
-            The exception that is thrown when a composition is invalid.
-            </summary>
-            <seealso cref="T:System.Exception" />
-        </member>
-        <member name="P:Umbraco.Core.Exceptions.InvalidCompositionException.ContentTypeAlias">
-            <summary>
-            Gets the content type alias.
-            </summary>
-            <value>
-            The content type alias.
-            </value>
-        </member>
-        <member name="P:Umbraco.Core.Exceptions.InvalidCompositionException.AddedCompositionAlias">
-            <summary>
-            Gets the added composition alias.
-            </summary>
-            <value>
-            The added composition alias.
-            </value>
-        </member>
-        <member name="P:Umbraco.Core.Exceptions.InvalidCompositionException.PropertyTypeAliases">
-            <summary>
-            Gets the property type aliases.
-            </summary>
-            <value>
-            The property type aliases.
-            </value>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String,System.String[])">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
-            </summary>
-            <param name="contentTypeAlias">The content type alias.</param>
-            <param name="propertyTypeAliases">The property type aliases.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String,System.String,System.String[])">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
-            </summary>
-            <param name="contentTypeAlias">The content type alias.</param>
-            <param name="addedCompositionAlias">The added composition alias.</param>
-            <param name="propertyTypeAliases">The property type aliases.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
-            </summary>
-            <param name="message">The message that describes the error.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
-            </summary>
-            <param name="message">The error message that explains the reason for the exception.</param>
-            <param name="innerException">The exception that is the cause of the current exception, or a null reference (<see langword="Nothing" /> in Visual Basic) if no inner exception is specified.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.InvalidCompositionException" /> class.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.InvalidCompositionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-            <exception cref="T:System.ArgumentNullException">info</exception>
-        </member>
-        <member name="T:Umbraco.Core.Exceptions.WontImplementException">
-            <summary>
-            The exception that is thrown when a requested method or operation is not, and will not be, implemented.
-            </summary>
-            <remarks>
-            The <see cref="T:System.NotImplementedException" /> is to be used when some code is not implemented,
-            but should eventually be implemented (i.e. work in progress) and is reported by tools such as ReSharper.
-            This exception is to be used when some code is not implemented, and is not meant to be, for whatever
-            reason.
-            </remarks>
-            <seealso cref="T:System.NotImplementedException" />
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class.
-            </summary>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class with a specified reason message.
-            </summary>
-            <param name="message">The error message that explains the reason for the exception.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class.
-            </summary>
-            <param name="message">The error message that explains the reason for the exception.</param>
-            <param name="inner">The exception that is the cause of the current exception. If the <paramref name="inner" /> parameter is not <see langword="null" />, the current exception is raised in a <see langword="catch" /> block that handles the inner exception.</param>
-        </member>
-        <member name="M:Umbraco.Core.Exceptions.WontImplementException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Umbraco.Core.Exceptions.WontImplementException" /> class.
-            </summary>
-            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
         </member>
         <member name="T:Umbraco.Core.FactoryExtensions">
             <summary>
@@ -30969,7 +31175,7 @@
             <summary>
             Returns the application relative path to the file.
             </summary>
-            <param name="fullPathOrUrl">The full path or url.</param>
+            <param name="fullPathOrUrl">The full path or URL.</param>
             <returns>
             The <see cref="T:System.String"/> representing the relative path.
             </returns>
@@ -30985,11 +31191,11 @@
         </member>
         <member name="M:Umbraco.Core.IO.IFileSystem.GetUrl(System.String)">
             <summary>
-            Returns the application relative url to the file.
+            Returns the application relative URL to the file.
             </summary>
-            <param name="path">The path to return the url for.</param>
+            <param name="path">The path to return the URL for.</param>
             <returns>
-            <see cref="T:System.String"/> representing the relative url.
+            <see cref="T:System.String"/> representing the relative URL.
             </returns>
         </member>
         <member name="M:Umbraco.Core.IO.IFileSystem.GetLastModified(System.String)">
@@ -31222,9 +31428,9 @@
         </member>
         <member name="M:Umbraco.Core.IO.PhysicalFileSystem.GetRelativePath(System.String)">
             <summary>
-            Gets the filesystem-relative path of a full path or of an url.
+            Gets the filesystem-relative path of a full path or of an URL.
             </summary>
-            <param name="fullPathOrUrl">The full path or url.</param>
+            <param name="fullPathOrUrl">The full path or URL.</param>
             <returns>The path, relative to this filesystem's root.</returns>
             <remarks>
             <para>The relative path is relative to this filesystem's root, not starting with any
@@ -31244,10 +31450,10 @@
         </member>
         <member name="M:Umbraco.Core.IO.PhysicalFileSystem.GetUrl(System.String)">
             <summary>
-            Gets the url.
+            Gets the URL.
             </summary>
             <param name="path">The filesystem-relative path.</param>
-            <returns>The url.</returns>
+            <returns>The URL.</returns>
             <remarks>All separators are forward-slashes.</remarks>
         </member>
         <member name="M:Umbraco.Core.IO.PhysicalFileSystem.GetLastModified(System.String)">
@@ -32603,10 +32809,10 @@
         </member>
         <member name="M:Umbraco.Core.PublishedContentExtensions.UrlSegment(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
             <summary>
-            Gets the url segment of the content item.
+            Gets the URL segment of the content item.
             </summary>
             <param name="content">The content item.</param>
-            <param name="culture">The specific culture to get the url segment for. If null is used the current culture is used (Default is null).</param>
+            <param name="culture">The specific culture to get the URL segment for. If null is used the current culture is used (Default is null).</param>
         </member>
         <member name="M:Umbraco.Core.PublishedContentExtensions.CultureDate(Umbraco.Core.Models.PublishedContent.IPublishedContent,System.String)">
             <summary>
@@ -32621,7 +32827,7 @@
             </summary>
             <param name="content">The content item.</param>
             <param name="culture">
-            The specific culture to get the url children for. Default is null which will use the current culture in <see cref="T:Umbraco.Core.Models.PublishedContent.VariationContext"/>        
+            The specific culture to get the URL children for. Default is null which will use the current culture in <see cref="T:Umbraco.Core.Models.PublishedContent.VariationContext"/>        
             </param>
             <remarks>
             <para>Gets children that are available for the specified culture.</para>
@@ -32756,9 +32962,9 @@
         </member>
         <member name="P:Umbraco.Core.Configuration.GlobalSettings.ReservedUrls">
             <summary>
-            Gets the reserved urls from web.config.
+            Gets the reserved URLs from web.config.
             </summary>
-            <value>The reserved urls.</value>
+            <value>The reserved URLs.</value>
         </member>
         <member name="P:Umbraco.Core.Configuration.GlobalSettings.ReservedPaths">
             <summary>
@@ -32838,10 +33044,10 @@
         </member>
         <member name="P:Umbraco.Core.Configuration.GlobalSettings.HideTopLevelNodeFromPath">
             <summary>
-            Gets a value indicating whether umbraco should hide top level nodes from generated urls.
+            Gets a value indicating whether umbraco should hide top level nodes from generated URLs.
             </summary>
             <value>
-                <c>true</c> if umbraco hides top level nodes from urls; otherwise, <c>false</c>.
+                <c>true</c> if umbraco hides top level nodes from URLs; otherwise, <c>false</c>.
             </value>
         </member>
         <member name="P:Umbraco.Core.Configuration.GlobalSettings.UseHttps">
@@ -32869,9 +33075,9 @@
         </member>
         <member name="P:Umbraco.Core.Configuration.IGlobalSettings.ReservedUrls">
             <summary>
-            Gets the reserved urls from web.config.
+            Gets the reserved URLs from web.config.
             </summary>
-            <value>The reserved urls.</value>
+            <value>The reserved URLs.</value>
         </member>
         <member name="P:Umbraco.Core.Configuration.IGlobalSettings.ReservedPaths">
             <summary>
@@ -32907,10 +33113,10 @@
         </member>
         <member name="P:Umbraco.Core.Configuration.IGlobalSettings.HideTopLevelNodeFromPath">
             <summary>
-            Gets a value indicating whether umbraco should hide top level nodes from generated urls.
+            Gets a value indicating whether umbraco should hide top level nodes from generated URLs.
             </summary>
             <value>
-            	<c>true</c> if umbraco hides top level nodes from urls; otherwise, <c>false</c>.
+            	<c>true</c> if umbraco hides top level nodes from URLs; otherwise, <c>false</c>.
             </value>
         </member>
         <member name="P:Umbraco.Core.Configuration.IGlobalSettings.UseHttps">
@@ -35787,16 +35993,15 @@
             sequence.</para>
             </remarks>
         </member>
-        <member name="P:Umbraco.Core.RuntimeOptions.InstallEmptyDatabase">
+        <member name="P:Umbraco.Core.RuntimeOptions.InstallUnattended">
             <summary>
-            Gets a value indicating whether the runtime should enter Install level when the database is empty.
+            Gets a value indicating whether unattended installs are enabled.
             </summary>
             <remarks>
             <para>By default, when a database connection string is configured and it is possible to connect to
-            the database, but the database is empty, the runtime enters the BootFailed level. If this options
-            is set to true, it enters the Install level instead.</para>
-            <para>It is then up to the implementor, that is setting this value, to take over the installation
-            sequence.</para>
+            the database, but the database is empty, the runtime enters the <c>Install</c> level.
+            If this option is set to <c>true</c> an unattended install will be performed and the runtime enters
+            the <c>Run</c> level.</para>
             </remarks>
         </member>
         <member name="M:Umbraco.Core.RuntimeOptions.DoRuntimeBoot(Umbraco.Core.Logging.IProfilingLogger)">
@@ -36664,7 +36869,7 @@
         </member>
         <member name="P:Umbraco.Core.IRuntimeState.ApplicationUrl">
             <summary>
-            Gets the Umbraco application url.
+            Gets the Umbraco application URL.
             </summary>
             <remarks>This is eg "http://www.example.com".</remarks>
         </member>
@@ -37185,7 +37390,7 @@
         <member name="P:Umbraco.Core.RuntimeState.BootFailedException">
             <inheritdoc />
         </member>
-        <member name="M:Umbraco.Core.RuntimeState.DetermineRuntimeLevel(Umbraco.Core.Persistence.IUmbracoDatabaseFactory,Umbraco.Core.Logging.ILogger)">
+        <member name="M:Umbraco.Core.RuntimeState.DetermineRuntimeLevel(Umbraco.Core.Persistence.IUmbracoDatabaseFactory)">
             <summary>
             Determines the runtime level.
             </summary>
@@ -38879,18 +39084,18 @@
         </member>
         <member name="M:Umbraco.Core.StringExtensions.ToUrlSegment(System.String)">
             <summary>
-            Cleans a string to produce a string that can safely be used in an url segment.
+            Cleans a string to produce a string that can safely be used in an URL segment.
             </summary>
             <param name="text">The text to filter.</param>
-            <returns>The safe url segment.</returns>
+            <returns>The safe URL segment.</returns>
         </member>
         <member name="M:Umbraco.Core.StringExtensions.ToUrlSegment(System.String,System.String)">
             <summary>
-            Cleans a string, in the context of a specified culture, to produce a string that can safely be used in an url segment.
+            Cleans a string, in the context of a specified culture, to produce a string that can safely be used in an URL segment.
             </summary>
             <param name="text">The text to filter.</param>
             <param name="culture">The culture.</param>
-            <returns>The safe url segment.</returns>
+            <returns>The safe URL segment.</returns>
         </member>
         <member name="M:Umbraco.Core.StringExtensions.ToCleanString(System.String,Umbraco.Core.Strings.CleanStringType)">
             <summary>
@@ -38944,7 +39149,7 @@
         <member name="M:Umbraco.Core.StringExtensions.ToSafeFileName(System.String)">
             <summary>
             Cleans a string, in the context of the invariant culture, to produce a string that can safely be used as a filename,
-            both internally (on disk) and externally (as a url).
+            both internally (on disk) and externally (as a URL).
             </summary>
             <param name="text">The text to filter.</param>
             <returns>The safe filename.</returns>
@@ -38952,7 +39157,7 @@
         <member name="M:Umbraco.Core.StringExtensions.ToSafeFileName(System.String,System.String)">
             <summary>
             Cleans a string, in the context of the invariant culture, to produce a string that can safely be used as a filename,
-            both internally (on disk) and externally (as a url).
+            both internally (on disk) and externally (as a URL).
             </summary>
             <param name="text">The text to filter.</param>
             <param name="culture">The culture.</param>
@@ -39142,21 +39347,21 @@
         </member>
         <member name="T:Umbraco.Core.Strings.ContentBaseExtensions">
             <summary>
-            Provides extension methods to IContentBase to get url segments.
+            Provides extension methods to IContentBase to get URL segments.
             </summary>
         </member>
         <member name="M:Umbraco.Core.Strings.ContentBaseExtensions.GetUrlSegment(Umbraco.Core.Models.IContentBase,System.Collections.Generic.IEnumerable{Umbraco.Core.Strings.IUrlSegmentProvider},System.String)">
             <summary>
-            Gets the url segment for a specified content and culture.
+            Gets the URL segment for a specified content and culture.
             </summary>
             <param name="content">The content.</param>
             <param name="culture">The culture.</param>
             <param name="urlSegmentProviders"></param>
-            <returns>The url segment.</returns>
+            <returns>The URL segment.</returns>
         </member>
         <member name="T:Umbraco.Core.Strings.DefaultShortStringHelper">
             <summary>
-            New default implementation of string functions for short strings such as aliases or url segments.
+            New default implementation of string functions for short strings such as aliases or URL segments.
             </summary>
             <remarks>
             <para>Not optimized to work on large bodies of text.</para>
@@ -39188,10 +39393,10 @@
         </member>
         <member name="M:Umbraco.Core.Strings.DefaultShortStringHelper.CleanStringForUrlSegment(System.String)">
             <summary>
-            Cleans a string to produce a string that can safely be used in an url segment.
+            Cleans a string to produce a string that can safely be used in an URL segment.
             </summary>
             <param name="text">The text to filter.</param>
-            <returns>The safe url segment.</returns>
+            <returns>The safe URL segment.</returns>
             <remarks>
             <para>The string will be cleaned in the context of the default culture.</para>
             <para>Url segments are Ascii only (no accents...).</para>
@@ -39199,11 +39404,11 @@
         </member>
         <member name="M:Umbraco.Core.Strings.DefaultShortStringHelper.CleanStringForUrlSegment(System.String,System.String)">
             <summary>
-            Cleans a string, in the context of a specified culture, to produce a string that can safely be used in an url segment.
+            Cleans a string, in the context of a specified culture, to produce a string that can safely be used in an URL segment.
             </summary>
             <param name="text">The text to filter.</param>
             <param name="culture">The culture.</param>
-            <returns>The safe url segment.</returns>
+            <returns>The safe URL segment.</returns>
             <remarks>
             <para>Url segments are Ascii only (no accents...).</para>
             </remarks>
@@ -39211,7 +39416,7 @@
         <member name="M:Umbraco.Core.Strings.DefaultShortStringHelper.CleanStringForSafeFileName(System.String)">
             <summary>
             Cleans a string, in the context of the default culture, to produce a string that can safely be used as a filename,
-            both internally (on disk) and externally (as a url).
+            both internally (on disk) and externally (as a URL).
             </summary>
             <param name="text">The text to filter.</param>
             <returns>The safe filename.</returns>
@@ -39220,7 +39425,7 @@
         <member name="M:Umbraco.Core.Strings.DefaultShortStringHelper.CleanStringForSafeFileName(System.String,System.String)">
             <summary>
             Cleans a string to produce a string that can safely be used as a filename,
-            both internally (on disk) and externally (as a url).
+            both internally (on disk) and externally (as a URL).
             </summary>
             <param name="text">The text to filter.</param>
             <param name="culture">The culture.</param>
@@ -39297,11 +39502,11 @@
         </member>
         <member name="M:Umbraco.Core.Strings.DefaultUrlSegmentProvider.GetUrlSegment(Umbraco.Core.Models.IContentBase,System.String)">
             <summary>
-            Gets the url segment for a specified content and culture.
+            Gets the URL segment for a specified content and culture.
             </summary>
             <param name="content">The content.</param>
             <param name="culture">The culture.</param>
-            <returns>The url segment.</returns>
+            <returns>The URL segment.</returns>
         </member>
         <member name="T:Umbraco.Core.Strings.Diff">
              <summary>
@@ -39468,7 +39673,7 @@
         </member>
         <member name="T:Umbraco.Core.Strings.IShortStringHelper">
             <summary>
-            Provides string functions for short strings such as aliases or url segments.
+            Provides string functions for short strings such as aliases or URL segments.
             </summary>
             <remarks>Not necessarily optimized to work on large bodies of text.</remarks>
         </member>
@@ -39493,24 +39698,24 @@
         </member>
         <member name="M:Umbraco.Core.Strings.IShortStringHelper.CleanStringForUrlSegment(System.String)">
             <summary>
-            Cleans a string to produce a string that can safely be used in an url segment.
+            Cleans a string to produce a string that can safely be used in an URL segment.
             </summary>
             <param name="text">The text to filter.</param>
-            <returns>The safe url segment.</returns>
+            <returns>The safe URL segment.</returns>
             <remarks>The string will be cleaned in the context of the IShortStringHelper default culture.</remarks>
         </member>
         <member name="M:Umbraco.Core.Strings.IShortStringHelper.CleanStringForUrlSegment(System.String,System.String)">
             <summary>
-            Cleans a string, in the context of a specified culture, to produce a string that can safely be used in an url segment.
+            Cleans a string, in the context of a specified culture, to produce a string that can safely be used in an URL segment.
             </summary>
             <param name="text">The text to filter.</param>
             <param name="culture">The culture.</param>
-            <returns>The safe url segment.</returns>
+            <returns>The safe URL segment.</returns>
         </member>
         <member name="M:Umbraco.Core.Strings.IShortStringHelper.CleanStringForSafeFileName(System.String)">
             <summary>
             Cleans a string, in the context of the invariant culture, to produce a string that can safely be used as a filename,
-            both internally (on disk) and externally (as a url).
+            both internally (on disk) and externally (as a URL).
             </summary>
             <param name="text">The text to filter.</param>
             <returns>The safe filename.</returns>
@@ -39519,7 +39724,7 @@
         <member name="M:Umbraco.Core.Strings.IShortStringHelper.CleanStringForSafeFileName(System.String,System.String)">
             <summary>
             Cleans a string, in the context of a specified culture, to produce a string that can safely be used as a filename,
-            both internally (on disk) and externally (as a url).
+            both internally (on disk) and externally (as a URL).
             </summary>
             <param name="text">The text to filter.</param>
             <param name="culture">The culture.</param>
@@ -39579,20 +39784,20 @@
         </member>
         <member name="T:Umbraco.Core.Strings.IUrlSegmentProvider">
             <summary>
-            Provides url segments for content.
+            Provides URL segments for content.
             </summary>
             <remarks>Url segments should comply with IETF RFCs regarding content, encoding, etc.</remarks>
         </member>
         <member name="M:Umbraco.Core.Strings.IUrlSegmentProvider.GetUrlSegment(Umbraco.Core.Models.IContentBase,System.String)">
             <summary>
-            Gets the url segment for a specified content and culture.
+            Gets the URL segment for a specified content and culture.
             </summary>
             <param name="content">The content.</param>
             <param name="culture">The culture.</param>
-            <returns>The url segment.</returns>
-            <remarks>This is for when Umbraco is capable of managing more than one url
+            <returns>The URL segment.</returns>
+            <remarks>This is for when Umbraco is capable of managing more than one URL
             per content, in 1-to-1 multilingual configurations. Then there would be one
-            url per culture.</remarks>
+            URL per culture.</remarks>
         </member>
         <member name="T:Umbraco.Core.Strings.Utf8ToAsciiConverter">
             <summary>
@@ -39684,17 +39889,17 @@
         </member>
         <member name="T:Umbraco.Core.Sync.ApplicationUrlHelper">
             <summary>
-            A helper used to determine the current server umbraco application url.
+            A helper used to determine the current server umbraco application URL.
             </summary>
         </member>
         <member name="P:Umbraco.Core.Sync.ApplicationUrlHelper.ApplicationUrlProvider">
             <summary>
-            Gets or sets a custom provider for the umbraco application url.
+            Gets or sets a custom provider for the umbraco application URL.
             </summary>
             <remarks>
             <para>Receives the current request as a parameter, and it may be null. Must return a properly
-            formatted url with scheme and umbraco dir and no trailing slash eg "http://www.mysite.com/umbraco",
-            or <c>null</c>. To be used in auto-load-balancing scenarios where the application url is not
+            formatted URL with scheme and umbraco dir and no trailing slash eg "http://www.mysite.com/umbraco",
+            or <c>null</c>. To be used in auto-load-balancing scenarios where the application URL is not
             in config files but is determined programmatically.</para>
             <para>Must be assigned before resolution is frozen.</para>
             </remarks>
@@ -39893,7 +40098,7 @@
         </member>
         <member name="M:Umbraco.Core.Sync.DatabaseServerRegistrar.GetCurrentServerUmbracoApplicationUrl">
             <summary>
-            Gets the current umbraco application url.
+            Gets the current umbraco application URL.
             </summary>
         </member>
         <member name="T:Umbraco.Core.Sync.DatabaseServerRegistrarOptions">
@@ -40017,11 +40222,11 @@
         </member>
         <member name="M:Umbraco.Core.Sync.IServerRegistrar.GetCurrentServerUmbracoApplicationUrl">
             <summary>
-            Gets the current umbraco application url.
+            Gets the current umbraco application URL.
             </summary>
             <remarks>
-            <para>If the registrar does not provide the umbraco application url, should return null.</para>
-            <para>Must return null, or a url that ends with SystemDirectories.Umbraco, and contains a scheme, eg "http://www.mysite.com/umbraco".</para>
+            <para>If the registrar does not provide the umbraco application URL, should return null.</para>
+            <para>Must return null, or a URL that ends with SystemDirectories.Umbraco, and contains a scheme, eg "http://www.mysite.com/umbraco".</para>
             </remarks>
         </member>
         <member name="T:Umbraco.Core.Sync.MessageType">

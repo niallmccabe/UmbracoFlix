@@ -19,6 +19,7 @@ $default-link-color: #a5f9f1;
 $hover-link-color: #79c6c6;
 
 $card-background-color: darken($body-background-color, 10%);
+$text-strong: $secondary-text-color;
 
 // Fonts
 // Common font stacks should be defined in util.scss, specific ones can be named or referenced here

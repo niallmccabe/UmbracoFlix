@@ -1,5 +1,23 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.TelevisionShow>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = null;
+    Layout = "_Layout.cshtml";
 }
+<div class="container">
+
+    @foreach (var season in Model.Children)
+    {
+    <div class="block">
+        <h3><a href="@season.Url()">@season.Name</a></h3>
+        <h4>Episodes</h4>
+        <ul>
+            @foreach (var episode in season.Children)
+            {
+                <li><a href="@episode.Url()">@episode.Name</a></li>
+            }
+        </ul>
+    </div>
+       
+    }
+</div>
+

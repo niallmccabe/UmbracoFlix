@@ -48,3 +48,13 @@ MiniflixApp.Web/yarn-error.log
 MiniflixApp.Web/Umbraco/
 
 .vs/
+
+MiniflixApp.UI/obj/Release/
+
+MiniflixApp.Web/obj/Release/
+
+MiniflixApp.Core/obj/Release/
+
+MiniflixApp.Core/bin/Release/
+
+MiniflixApp.Web/App_Data/UploadedFiles/
