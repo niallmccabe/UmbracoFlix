@@ -46,3 +46,5 @@ MiniflixApp.Web/yarn.lock
 MiniflixApp.Web/yarn-error.log
 
 MiniflixApp.Web/Umbraco/
+
+.vs/

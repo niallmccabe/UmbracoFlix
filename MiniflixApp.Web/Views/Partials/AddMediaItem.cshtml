@@ -1,0 +1,103 @@
+﻿@model MiniflixApp.Core.Models.ViewModels.AddMediaItemViewModel
+@{
+
+}
+@*@using (Html.BeginUmbracoForm("AddMediaItemUpload", "MediaLibrary", null, new { enctype = "multipart/form-data" }, FormMethod.Post))
+{
+<div>
+    @Html.LabelFor(m => m.File)
+    @Html.TextBoxFor(m => m.File, new { type = "file" })
+</div>
+    <input type="submit" />
+}*@
+<p>Upload file</p>
+<div id="dvDragFiles" class="box">Drag file here to upload</div>
+<progress class="progress" value="0" max="100"></progress>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $('#dvDragFiles').on({
+            'dragover dragenter': function (e) {
+                $(e.currentTarget).css({ opacity: 0.5 });
+                e.preventDefault();
+                e.stopPropagation();
+            },
+            'drop': function (e) {
+                console.log("Drop");
+                //Upload file here
+                onFileDrop(e);
+                e.preventDefault();
+                e.stopPropagation();
+            },
+            'dragexit dragend dragleave': function (e) {
+                $(e.currentTarget).css({ opacity: 1 });
+            }
+        });
+        function onFileDrop(evt) {
+            $(evt.currentTarget).css({ opacity: 1 });
+            try {
+                var files = evt.originalEvent.dataTransfer.files;
+                for (var i = 0; i < files.length; i++) {
+                    uploadFile(files[i]);
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        function uploadFile(file) {
+            var maxFileSizeMB = 100;
+
+            var fileChunks = [];
+            var bufferChunkSizeInBytes = maxFileSizeMB * (1024 * 1024);
+
+            var currentStreamPosition = 0;
+            var endPosition = bufferChunkSizeInBytes;
+            var size = file.size;
+
+            while (currentStreamPosition < size) {
+                fileChunks.push(file.slice(currentStreamPosition, endPosition));
+                currentStreamPosition = endPosition;
+                endPosition = currentStreamPosition + bufferChunkSizeInBytes;
+            }
+
+            uploadFileChunk(fileChunks, file.name, 1, fileChunks.length);
+
+        }
+        function uploadFileChunk(fileChunks, fileName, currentPart, totalPart) {
+            var formData = new FormData();
+            formData.append('file', fileChunks[currentPart - 1], fileName);
+            formData.append('lastChunk', totalPart == currentPart);
+
+            $.ajax({
+                method: "POST",
+                url: '/umbraco/surface/MediaLibrary/UploadFileChunks',
+                contentType: false,
+                processData: false,
+                data: formData                
+            }).done( function (data) {
+                if (totalPart >= currentPart) {
+                    console.log("uploading file part no: " + currentPart, " out of " + totalPart);
+                    if (data.status == true) {
+                        $('.progress').prop('value', currentPart);
+                        $('.progress').prop('max', totalPart);
+                        if (totalPart == currentPart) {
+                            //Whole file uploaded
+                            console.log("whole file uploaded successfully");
+                        } else {                            
+                            //Show uploading progress
+                            uploadFileChunk(fileChunks, fileName, currentPart + 1, totalPart);
+                        }
+                    } else {
+                        //retry message to upload rest of the file
+                        console.log("failed to upload file part no: " + currentPart);
+                    }
+                }
+            }).fail( function () {
+                //retry message to upload rest of the file
+                console.log("error to upload file part no: " + currentPart);
+            });
+
+        }
+    })
+   
+</script>

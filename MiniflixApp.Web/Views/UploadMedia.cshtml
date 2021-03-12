@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.UploadMedia>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "_Layout.cshtml";
+}
+<div class="container">
+    @Html.Action("AddMediaItem", "MediaLibrary")
+    
+</div>
+
